@@ -9,9 +9,9 @@ int main()
 {
     const int windowWidth{384};
     const int windowHeight{384};
-    InitWindow(windowWidth, windowHeight, "Stephen's Top Down");
+    InitWindow(windowWidth, windowHeight, "James' Top Down");
 
-    Texture2D map = LoadTexture("nature_tileset/OpenWorldMap24x24.png");
+    Texture2D map = LoadTexture("nature_tileset/WorldMap.png");
     Vector2 mapPos{0.0, 0.0};
     const float mapScale{4.0f};
 
