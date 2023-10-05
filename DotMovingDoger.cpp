@@ -227,10 +227,10 @@ int main()
 
 
         // text to the maps
-        DrawText("This Game Is Fun!", 900, 100, 40, RED);
-        DrawText("If you hit the squares you lose!", 650, 140, 40, RED);
-        DrawText("If you get the prize you win!", 700, 180, 40, RED);
-        DrawText("Good Luck and Enjoy!", 900, 220, 40, RED);
+        DrawText("This Game Is Fun!", 1020, 20, 40, RED);
+        DrawText("If you hit the squares you lose!", 730, 70, 40, RED);
+        DrawText("If you get the prize you win!", 800, 110, 40, RED);
+        DrawText("Good Luck and Enjoy!", 950, 150, 40, RED);
         DrawText("Get Me!!!", 1110, 740, 40, BLUE);
 
         // draw circle
