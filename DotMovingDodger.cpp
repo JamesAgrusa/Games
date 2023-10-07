@@ -265,7 +265,7 @@ int main()
         DrawText("W,A,S,D moves your dodger!",10, 740, 40, YELLOW);
 
         // draw circle
-        DrawCircle(circle_x, circle_y, 25, BLACK);
+        DrawCircle(circle_x, circle_y, 25, PURPLE);
 
         // draw axes
         DrawRectangle(axe_x, axe_y, axe_length, axe_length, ORANGE);
