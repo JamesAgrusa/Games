@@ -99,9 +99,9 @@ int main()
     int u_prize_y{prize_y};
     int b_prize_y{prize_y + prize_length};
 
-    int direction{8};
+    int direction{12};
     int upDirection{20};
-    int prizeProtectionDirection{15};
+    int prizeProtectionDirection{17};
     // lose condition
     bool collision_with_axe = 
                              (b_axe_y >= u_circle_y) && 
@@ -149,11 +149,12 @@ int main()
     while (WindowShouldClose() == false)
     {
         BeginDrawing();
-        ClearBackground(WHITE);
+        ClearBackground(DARKGRAY);
 
         if(collision_with_prize)
         {
-             DrawText("You Win!", 600, 300, 40, RED);
+             DrawText("You Win!", 600, 300, 40, YELLOW);
+             DrawText("Thanks for playing an UnrealityArts game <3", 350, 500, 30, YELLOW);
         }
         else if (collision_with_axe ||  
         collision_with_axe1 || 
@@ -162,7 +163,7 @@ int main()
         collision_with_axe4 ||
         collision_with_axe5)
         {
-            DrawText("You Lose! GAME OVER", 400, 200, 40, RED);
+            DrawText("You Lose! GAME OVER", 400, 200, 40, YELLOW);
             
         }
         else
@@ -255,23 +256,24 @@ int main()
 
 
         // text to the maps
-        DrawText("This Game Is Fun!", 1020, 20, 40, RED);
-        DrawText("If you hit the squares you lose!", 730, 70, 40, RED);
-        DrawText("If you get the prize you win!", 800, 110, 40, RED);
-        DrawText("Good Luck and Enjoy!", 950, 150, 40, RED);
-        DrawText("Get Me!!!", 1110, 740, 40, BLUE);
-        DrawText("W,A,S,D moves your dodger!",10, 740, 40, RED);
+        DrawText("This Game Is Fun!", 1020, 20, 40, YELLOW);
+        DrawText("This Game Is Fun!", 1020, 20, 40, YELLOW);
+        DrawText("If you hit the squares you lose!", 730, 70, 40, YELLOW);
+        DrawText("If you get the prize you win!", 800, 110, 40, YELLOW);
+        DrawText("Good Luck and Enjoy!", 950, 150, 40, YELLOW);
+        DrawText("Get Me!!!", 1110, 740, 40, YELLOW);
+        DrawText("W,A,S,D moves your dodger!",10, 740, 40, YELLOW);
 
         // draw circle
         DrawCircle(circle_x, circle_y, 25, BLACK);
 
         // draw axes
-        DrawRectangle(axe_x, axe_y, axe_length, axe_length, BLACK);
+        DrawRectangle(axe_x, axe_y, axe_length, axe_length, ORANGE);
         DrawRectangle(axe1_x, axe1_y, axe1_length, axe1_length, BLACK);
         DrawRectangle(axe2_x, axe2_y, axe2_length, axe2_length, BLACK);
         DrawRectangle(axe3_x, axe3_y, axe3_length, axe3_length, BLACK);
         DrawRectangle(axe4_x, axe4_y, axe4_length, axe4_length, BLACK);
-        DrawRectangle(axe5_x, axe5_y, axe5_length, axe5_length, BLACK);
+        DrawRectangle(axe5_x, axe5_y, axe5_length, axe5_length, PINK);
 
         DrawRectangle(prize_x, prize_y, prize_length, prize_length, RED);
 
