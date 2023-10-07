@@ -101,7 +101,7 @@ int main()
 
     int direction{8};
     int upDirection{10};
-
+    int prizeProtectionDirection{15};
     // lose condition
     bool collision_with_axe = 
                              (b_axe_y >= u_circle_y) && 
@@ -133,7 +133,7 @@ int main()
                              (r_axe4_x >= l_circle_x) && 
                              (l_axe4_x <= r_circle_x);                                                                         
 
-bool collision_with_axe5 = 
+    bool collision_with_axe5 = 
                              (b_axe5_y >= u_circle_y) && 
                              (u_axe5_y <= b_circle_y) && 
                              (r_axe5_x >= l_circle_x) && 
@@ -310,6 +310,13 @@ bool collision_with_axe5 =
         {
             direction = -direction;
         }
+
+        // bottom axe
+         axe5_x += prizeProtectionDirection;
+        if (axe5_x > width || axe5_x < 1000 || axe5_x > 1399)
+            {
+               prizeProtectionDirection = -prizeProtectionDirection;
+            }
 
 
         if (IsKeyDown(KEY_D) && circle_x < 1400)
