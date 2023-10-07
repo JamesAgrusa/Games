@@ -100,7 +100,7 @@ int main()
     int b_prize_y{prize_y + prize_length};
 
     int direction{8};
-    int upDirection{10};
+    int upDirection{20};
     int prizeProtectionDirection{15};
     // lose condition
     bool collision_with_axe = 
@@ -260,6 +260,7 @@ int main()
         DrawText("If you get the prize you win!", 800, 110, 40, RED);
         DrawText("Good Luck and Enjoy!", 950, 150, 40, RED);
         DrawText("Get Me!!!", 1110, 740, 40, BLUE);
+        DrawText("W,A,S,D moves your dodger!",10, 740, 40, RED);
 
         // draw circle
         DrawCircle(circle_x, circle_y, 25, BLACK);
@@ -313,7 +314,7 @@ int main()
 
         // bottom axe
          axe5_x += prizeProtectionDirection;
-        if (axe5_x > width || axe5_x < 1000 || axe5_x > 1399)
+        if (axe5_x > width || axe5_x < 800 || axe5_x > 1399)
             {
                prizeProtectionDirection = -prizeProtectionDirection;
             }
